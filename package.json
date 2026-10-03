@@ -1,0 +1,38 @@
+{
+  "name": "software-project-valuation-calculator",
+  "version": "1.0.0",
+  "description": "Deterministic TypeScript engine for estimating the indicative value of SaaS, apps, plugins, and source-code projects.",
+  "license": "MIT",
+  "author": "ESDecode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esdecode/software-project-valuation-calculator.git"
+  },
+  "homepage": "https://esdecode.com/tools/software-project-valuation-calculator",
+  "bugs": {
+    "url": "https://github.com/esdecode/software-project-valuation-calculator/issues"
+  },
+  "keywords": ["software-valuation", "project-valuation", "saas-valuation", "source-code-valuation", "valuation-calculator", "typescript", "developer-tools"],
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE", "docs/VALUATION_MODEL.md"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "example": "tsx examples/basic.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
